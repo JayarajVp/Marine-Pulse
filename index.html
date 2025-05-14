@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marine Pulse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Cinzel Decorative', cursive;
+      overflow-x: hidden;
+    }
+
+    /* HERO SECTION */
+    section.hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    video#bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+    }
+
+    .logo span {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .nav {
+      font-size: 20px;
+      display: flex;
+      gap: 30px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .content {
+      max-width: 1000px;
+      padding-left: 20px;
+    }
+
+    .content h1 {
+      font-size: 54px;
+      line-height: 1.2;
+    }
+
+    .content p {
+      margin-top: 20px;
+      font-family: 'Cinzel', serif;
+      font-size: 28px;
+    }
+
+    /* OCEAN DYING SECTION */
+    section.ocean-dying {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 40px;
+      background-image: url('images/download\ \(3\).jpg'); /* 🖼️ Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+
+
+    .ocean-text {
+      flex: 1 1 60%;
+      padding-right: 40px;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .ocean-text h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .ocean-img {
+      flex: 1 1 35%;
+      text-align: center;
+    }
+
+    .ocean-img img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    /* SECOND VIDEO SECTION */
+    .video-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+
+    .video-section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .video-section .overlay {
+      position: relative;
+      z-index: 1;
+      color: white;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .video-section p {
+      font-size: 24px;
+      max-width: 800px;
+      margin-bottom: 10px;
+    }
+    a {
+    color: #ffd700; /* gold */
+    text-decoration: none;
+    }
+
+    a:hover {
+    color: #ff8c00; /* dark orange */
+    text-decoration: underline;
+    }
+    /* RESPONSIVE */
+    @media screen and (max-width: 1080px) {
+      .content h1 {
+        font-size: 36px;
+      }
+
+      .content p {
+        font-size: 20px;
+      }
+
+      .nav {
+        font-size: 16px;
+      }
+
+      .logo span {
+        font-size: 28px;
+      }
+
+      .logo img {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      section.ocean-dying {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .ocean-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
+
+      .video-section h2 {
+        font-size: 28px;
+      }
+
+      .video-section p {
+        font-size: 18px;
+      }
+      .video-section a {
+      color: darkviolet;
+    }
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <video id="bgVideo" autoplay muted loop playsinline>
+      <source src="244188.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+      <div class="header">
+        <div class="logo">
+          <img src="images/20250513_2035_Turtle Logo on Blue_simple_compose_01jv52tdnaekcstxfwrmrkd1pa.png" alt="Logo" />
+          <span>Marine Pulse</span>
+        </div>
+        <div class="nav">
+          <span>Home</span>
+          <span>About</span>
+          <span>Contribute</span>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Protect Our Blue Planet</h1>
+        <p>Together, we can safeguard ocean animals and preserve marine ecosystems for future generations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OCEAN DYING SECTION -->
+  <section class="ocean-dying">
+    <div class="ocean-text">
+      <h2>The Ocean Is Dying — Because of Us</h2>
+      <p>We breathe because the ocean breathes.<br>
+        It gives us life — and we're killing it.<br>
+        Global warming is heating the water. Coral reefs are dying.<br>
+        Plastic is everywhere — sea turtles, dolphins, whales... they're choking on it.<br>
+        Endangered species are hunted, butchered, and disappearing forever.<br>
+        Oil spills, toxins, overfishing — the ocean can't keep healing itself.<br>
+        Every wave carries pain now. And if the ocean dies... so do we.</p>
+    </div>
+    <div class="ocean-img">
+      <img src="images/naja-bertolt-jensen-frWkCQZhe-I-unsplash.jpg" alt="Plastic Pollution in Ocean">
+    </div>
+  </section>
+
+  <!-- SECOND VIDEO SECTION -->
+  <section class="video-section">
+    <video autoplay muted loop playsinline>
+      <source src="4332083-uhd_4096_2160_24fps.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay">
+      <h2>Support Those Who Are Saving the Sea</h2>
+      <p>They’re out there — every day — rescuing injured marine animals, cleaning plastic from beaches, and fighting to protect endangered species.</p>
+      <p>But they can’t do it alone.</p>
+      <p>You can help them today — without spending a rupee by signing petition which will give them power in numbers.</p>
+      <p><a href="ngo.html">Click here </a> to check out ongoing petition from various NGOs </p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("bgVideo").playbackRate = 0.75;
+  </script>
+</body>
+</html>
